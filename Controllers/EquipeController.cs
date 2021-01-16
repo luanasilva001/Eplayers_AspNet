@@ -12,6 +12,7 @@ namespace EPlayers_AspNet.Controllers
     {
         Equipe equipeModel = new Equipe();
         [Route("Listar")]
+    
         public IActionResult Index()
         {
             // Listando todas as equipes e enviando para a View, através da ViewBag
@@ -20,6 +21,7 @@ namespace EPlayers_AspNet.Controllers
         }
 
         [Route("Cadastrar")]
+        
         public IActionResult Cadastrar(IFormCollection form)
         {
             // Criamos uma nova instância de Equipe
@@ -70,7 +72,7 @@ namespace EPlayers_AspNet.Controllers
         }
 
         [Route("{id}")]
-
+        
         public IActionResult Excluir(int id)
         {
             equipeModel.Delete(id);

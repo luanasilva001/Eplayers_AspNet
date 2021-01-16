@@ -38,7 +38,6 @@ namespace EPlayers_AspNet.Controllers
 
         [Route("{id}")]
         // [Route({"id"})]
-
         public IActionResult Excluir(int id)
         {
             jogadorModel.Delete(id);

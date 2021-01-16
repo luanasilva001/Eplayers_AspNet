@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\fic\\Desktop\\Eplayers_AspNet\\EPlayers_AspNet.csproj",
+  "FilePath": "c:\\Users\\olive\\Desktop\\Eplayers_AspNet_Luaninha\\EPlayers_AspNet.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "3.0",
@@ -14387,47 +14387,47 @@
         }
       }
     ],
-    "CSharpLanguageVersion": 900
+    "CSharpLanguageVersion": 800
   },
   "RootNamespace": "EPlayers_AspNet",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\fic\\Desktop\\Eplayers_AspNet\\Views\\Equipe\\Index.cshtml",
-      "TargetPath": "Views\\Equipe\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\fic\\Desktop\\Eplayers_AspNet\\Views\\Jogador\\Index.cshtml",
-      "TargetPath": "Views\\Jogador\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\fic\\Desktop\\Eplayers_AspNet\\Views\\Shared\\_Layout.cshtml",
-      "TargetPath": "Views\\Shared\\_Layout.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\fic\\Desktop\\Eplayers_AspNet\\Views\\Home\\Privacy.cshtml",
-      "TargetPath": "Views\\Home\\Privacy.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\fic\\Desktop\\Eplayers_AspNet\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\fic\\Desktop\\Eplayers_AspNet\\Views\\_ViewStart.cshtml",
+      "FilePath": "c:\\Users\\olive\\Desktop\\Eplayers_AspNet_Luaninha\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\fic\\Desktop\\Eplayers_AspNet\\Views\\_ViewImports.cshtml",
+      "FilePath": "c:\\Users\\olive\\Desktop\\Eplayers_AspNet_Luaninha\\Views\\Home\\Privacy.cshtml",
+      "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\olive\\Desktop\\Eplayers_AspNet_Luaninha\\Views\\Equipe\\Index.cshtml",
+      "TargetPath": "Views\\Equipe\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\olive\\Desktop\\Eplayers_AspNet_Luaninha\\Views\\Shared\\_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\olive\\Desktop\\Eplayers_AspNet_Luaninha\\Views\\Jogador\\Index.cshtml",
+      "TargetPath": "Views\\Jogador\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\olive\\Desktop\\Eplayers_AspNet_Luaninha\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\fic\\Desktop\\Eplayers_AspNet\\Views\\Home\\Index.cshtml",
+      "FilePath": "c:\\Users\\olive\\Desktop\\Eplayers_AspNet_Luaninha\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\olive\\Desktop\\Eplayers_AspNet_Luaninha\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
     }
