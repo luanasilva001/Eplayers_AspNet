@@ -5,7 +5,7 @@ namespace EPlayers_AspNet.Interfaces
 {
     public interface IJogador
     {
-         void Create (Jogador j);
+         void Create (Jogador jogador);
 
          List<Jogador> ReadAll();
 

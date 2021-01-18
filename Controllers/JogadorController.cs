@@ -27,8 +27,10 @@ namespace EPlayers_AspNet.Controllers
         {
             Jogador novoJogador = new Jogador();
             novoJogador.IdJogador = int.Parse(formJogador["idJogador"]);
-            novoJogador.IdEquipe = int.Parse(formJogador["idEquipe"]);
+            novoJogador.IdJogador = jogadorModel.idJogadores();
             novoJogador.Nome = formJogador["Nome"];
+            novoJogador.Email = formJogador["Email"];
+            novoJogador.Senha = formJogador["Senha"];
 
             jogadorModel.Create(novoJogador);
             ViewBag.Jogadores = jogadorModel.ReadAll();

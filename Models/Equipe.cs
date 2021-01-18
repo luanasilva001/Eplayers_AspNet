@@ -26,16 +26,16 @@ namespace EPlayers_AspNet.Models
 
         public int idEquipao()
         {
-            var equipe = ReadAll();
+            var equipes = ReadAll();
 
-            if(equipe.Count == 0)
+            if(equipes.Count == 0)
             {
                 return 1;
             }
 
-            var codigo = equipe[ equipe.Count - 1].IdEquipe;
+            var codigo = equipes[ equipes.Count - 1].IdEquipe;
 
-            IdEquipe ++;
+            codigo ++;
 
             return codigo;
         }

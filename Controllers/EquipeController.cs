@@ -15,8 +15,8 @@ namespace EPlayers_AspNet.Controllers
     
         public IActionResult Index()
         {
-            Equipe idAutomatico = new Equipe();
-            ViewBag.idAutomatico = idAutomatico.idEquipao();
+            // Equipe idAutomatico = new Equipe();
+            // ViewBag.idAutomatico = idAutomatico.idEquipao();
             // Listando todas as equipes e enviando para a View, através da ViewBag
             ViewBag.Equipes = equipeModel.ReadAll();
             return View();
@@ -31,7 +31,7 @@ namespace EPlayers_AspNet.Controllers
             // através do formulário
             // e salvamos no objeto novaEquipe
             Equipe novaEquipe = new Equipe();
-            novaEquipe.IdEquipe = Int32.Parse(form["idEquipe"]);
+            novaEquipe.IdEquipe = equipeModel.idEquipao();
             novaEquipe.Nome = form["Nome"];
             
             // Inicio uploud

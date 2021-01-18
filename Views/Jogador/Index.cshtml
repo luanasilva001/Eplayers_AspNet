@@ -4,10 +4,9 @@
 }
 
 
-<form method="POST" action='@Url.Action("Cadastrar")'>
-    <label>ID do Jogador</label>
-    <input type="text" name="IdJogador"/>
+<form class="cadastro-2" method="POST" action='@Url.Action("Cadastrar")'>
 
+    <div class="campo">
     <label>ID da Equipe</label>
     <select name="IdEquipe">
      @foreach (Equipe equipe in ViewBag.novaListagemdaEquipe)
@@ -15,12 +14,24 @@
          <option value="@equipe.IdEquipe">@equipe.Nome</option>
      }
     </select>
+    </div>
 
+    <div class="campo">
     <label>Nome</label>
     <input type="text" name="Nome"/>
+    </div>
 
+    <div class="campo">
+        <label>Email</label>
+        <input type="text" name="Email" />
+    </div>
 
-    <button type="submit"> Cadastrar </button>
+     <div class="campo">
+        <label>Senha</label>
+        <input type="password" name="Senha" />
+    </div>
+
+    <button class="gradient btn" type="submit"> Cadastrar </button>
 </form>
 
 
@@ -29,6 +40,7 @@
         <th>ID Jogador</th>
         <th>ID Equipe</th>
         <th>Nome</th>
+        <th>Email</th>
     </thead>
     <tbody>
         @foreach (Jogador jogador in ViewBag.Jogadores)
@@ -37,6 +49,7 @@
                 <td>@jogador.IdJogador</td>
                 <td>@jogador.IdEquipe</td>
                 <td>@jogador.Nome</td>
+                <td>@jogador.Email</td>
                 <td><a asp-area="Link para excluir um jogador" asp-controller="Jogador" asp-action="Excluir" asp-route-id="@jogador.IdJogador">Excluir</a></td>
             </tr>
         }
