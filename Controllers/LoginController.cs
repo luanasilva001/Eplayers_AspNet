@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using EPlayers_AspNet.Models;
+using Eplayers_AspNet_Luaninha.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -37,12 +38,19 @@ namespace Eplayers_AspNet_Luaninha.Controllers
             if(logado != null)
             {
                 HttpContext.Session.SetString("_UserName", logado.Split(";")[1]);
-                
+
                 return LocalRedirect("~/");
             }
 
             Mensagem = "Dados incorretos, tente novamente...";
             return LocalRedirect("~/Login");
+        }
+
+        [Route("Logout")]
+        public IActionResult Logout()
+        {
+            HttpContext.Session.Remove("_UserName");
+            return LocalRedirect("~/");
         }
     }
 }

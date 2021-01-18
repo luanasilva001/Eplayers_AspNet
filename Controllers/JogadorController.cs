@@ -1,27 +1,26 @@
 
 using System.IO;
 using EPlayers_AspNet.Models;
+using Eplayers_AspNet_Luaninha.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace EPlayers_AspNet.Controllers
+namespace Eplayers_AspNet_Luaninha.Controllers
 {
     [Route("Jogador")]
     public class JogadorController : Controller
     {
         Jogador jogadorModel = new Jogador();
         [Route("Listar")]
-
         public IActionResult Index()
         {
             ViewBag.Jogadores = jogadorModel.ReadAll();
-            
-            Equipe novaListagemdaEquipe = new Equipe();
-            ViewBag.novaListagemdaEquipe = novaListagemdaEquipe.ReadAll();
+
+            Equipe novalistagemdaequipe = new Equipe();
+            ViewBag.novalistagemdaequipe = novalistagemdaequipe.ReadAll();
             return View();
         }
-
-
+        
         [Route("Cadastrar")]
         public IActionResult Cadastrar(IFormCollection formJogador)
         {
@@ -34,13 +33,11 @@ namespace EPlayers_AspNet.Controllers
 
             jogadorModel.Create(novoJogador);
             ViewBag.Jogadores = jogadorModel.ReadAll();
-
-            return LocalRedirect("~/Jogador/Listar");
+            return LocalRedirect("~Jogador/Listar");
         }
 
         [Route("{id}")]
-        // [Route({"id"})]
-        public IActionResult Excluir(int id)
+        public  IActionResult Excluir (int id)
         {
             jogadorModel.Delete(id);
             ViewBag.Jogadores = jogadorModel.ReadAll();

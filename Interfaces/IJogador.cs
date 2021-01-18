@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using EPlayers_AspNet.Models;
+using Eplayers_AspNet_Luaninha.Models;
 
 namespace EPlayers_AspNet.Interfaces
 {

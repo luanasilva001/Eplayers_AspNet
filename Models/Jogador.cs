@@ -1,14 +1,15 @@
 using System.Collections.Generic;
 using System.IO;
 using EPlayers_AspNet.Interfaces;
+using EPlayers_AspNet.Models;
 
-namespace EPlayers_AspNet.Models
+namespace Eplayers_AspNet_Luaninha.Models
 {
-    public class Jogador : EPlayersBase , IJogador
+    public class Jogador : EPlayersBase, IJogador
     {
         public int IdJogador { get; set; }
-        public string Nome { get; set; }
         public int IdEquipe { get; set; }
+        public string Nome { get; set; }
         public string Email { get; set; }
         public string Senha { get; set; }
 
@@ -19,9 +20,9 @@ namespace EPlayers_AspNet.Models
             CreateFolderAndFile(PATH);
         }
 
-        public string Prepare(Jogador jogador)
+        public string Prepare(Jogador j)
         {
-            return $"{jogador.IdJogador};{jogador.Nome};{jogador.IdEquipe};{jogador.Email};{jogador.Senha}";
+            return $"{j.IdJogador};{j.IdEquipe};{j.Nome};{j.Email};{j.Senha}";
         }
 
         public int idJogadores()
@@ -39,51 +40,48 @@ namespace EPlayers_AspNet.Models
 
             return codigo;
         }
-
+        
         public void Create(Jogador jogador)
         {
             string[] linhas = {Prepare(jogador)};
-            File.AppendAllLines(PATH, linhas);       
+            File.AppendAllLines(PATH, linhas);
         }
+
 
         public List<Jogador> ReadAll()
         {
-             List<Jogador> jogadores = new List<Jogador>();
-                string[] linhas = File.ReadAllLines(PATH);
+            List<Jogador> jogadores = new List<Jogador>();
+            string[] linhas = File.ReadAllLines(PATH);
 
-                foreach (var item in linhas)
-                {
-                    string [] linha = item.Split(";");
+            foreach (var item in linhas)
+            {
+                string[] linha = item.Split(";");
 
-                    Jogador jogador = new Jogador();
-                    jogador.IdJogador = int.Parse(linha[0]);
-                    jogador.Nome = linha[1];
-                    jogador.IdEquipe = int.Parse(linha[2]);
-                    jogador.Email = linha[3];
-                    jogador.Senha = linha[4];
+                Jogador jogador = new Jogador();
+                jogador.IdJogador = int.Parse(linha[0]);
+                jogador.IdEquipe = int.Parse(linha[1]);
+                jogador.Nome = linha[2];
+                jogador.Email = linha[3];
+                jogador.Senha = linha[4];
 
-                    jogadores.Add(jogador);
-                }
+                jogadores.Add(jogador);
+            }
 
-                    return jogadores;
+            return jogadores;
         }
-
-                public void Update(Jogador jogador)
-                {
-                    
-                    List<string> linhas = ReadAllLinesCSV(PATH);
-                    linhas.RemoveAll(x => x.Split(";")[0] == jogador.IdJogador.ToString());
-                    linhas.Add(Prepare(jogador));
-                    RewriteCSV(PATH, linhas);
-                }
-
-                public void Delete(int id)
-                {
-                        List<string> linhas = ReadAllLinesCSV(PATH);
-                        linhas.RemoveAll(x => x.Split(";")[0] == id.ToString());
-                        RewriteCSV(PATH, linhas);      
-                        
-                }
+        public void Update(Jogador jogador)
+        {
+            List<string> linhas = ReadAllLinesCSV(PATH);
+            linhas.RemoveAll(x => x.Split(";")[0] == jogador.IdJogador.ToString());
+            linhas.Add(Prepare(jogador));
+            RewriteCSV(PATH, linhas);
+        }
+        public void Delete(int id)
+        {
+             List<string> linhas = ReadAllLinesCSV(PATH);
+            linhas.RemoveAll(x => x.Split(";")[0] == id.ToString());
+            RewriteCSV(PATH, linhas);
+        }
 
         public void Update()
         {
