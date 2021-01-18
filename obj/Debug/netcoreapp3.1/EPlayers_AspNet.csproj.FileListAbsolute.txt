@@ -110,3 +110,4 @@ C:\Users\olive\Desktop\Eplayers_AspNet_Luaninha\obj\Debug\netcoreapp3.1\EPlayers
 C:\Users\olive\Desktop\Eplayers_AspNet_Luaninha\obj\Debug\netcoreapp3.1\EPlayers_AspNet.pdb
 C:\Users\olive\Desktop\Eplayers_AspNet_Luaninha\obj\Debug\netcoreapp3.1\EPlayers_AspNet.genruntimeconfig.cache
 C:\Users\olive\Desktop\Eplayers_AspNet_Luaninha\obj\Debug\netcoreapp3.1\EPlayers_AspNet.csproj.CopyComplete
+C:\Users\olive\Desktop\Eplayers_AspNet_Luaninha\obj\Debug\netcoreapp3.1\Razor\Views\Login\Index.cshtml.g.cs

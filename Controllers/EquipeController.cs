@@ -15,6 +15,8 @@ namespace EPlayers_AspNet.Controllers
     
         public IActionResult Index()
         {
+            Equipe idAutomatico = new Equipe();
+            ViewBag.idAutomatico = idAutomatico.idEquipao();
             // Listando todas as equipes e enviando para a View, através da ViewBag
             ViewBag.Equipes = equipeModel.ReadAll();
             return View();

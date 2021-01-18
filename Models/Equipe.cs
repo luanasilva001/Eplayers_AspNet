@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 
@@ -20,6 +22,22 @@ namespace EPlayers_AspNet.Models
         public string Prepare(Equipe e)
         {
             return $"{e.IdEquipe};{e.Nome};{e.Imagem}";
+        }
+
+        public int idEquipao()
+        {
+            var equipe = ReadAll();
+
+            if(equipe.Count == 0)
+            {
+                return 1;
+            }
+
+            var codigo = equipe[ equipe.Count - 1].IdEquipe;
+
+            IdEquipe ++;
+
+            return codigo;
         }
 
         public void Create(Equipe e)
@@ -47,6 +65,8 @@ namespace EPlayers_AspNet.Models
 
             return equipes;
         }
+
+   
 
         public void Update(Equipe e)
         {

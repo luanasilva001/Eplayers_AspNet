@@ -15,7 +15,7 @@ namespace EPlayers_AspNet.Controllers
         public IActionResult Index()
         {
             ViewBag.Jogadores = jogadorModel.ReadAll();
-
+            
             Equipe novaListagemdaEquipe = new Equipe();
             ViewBag.novaListagemdaEquipe = novaListagemdaEquipe.ReadAll();
             return View();
