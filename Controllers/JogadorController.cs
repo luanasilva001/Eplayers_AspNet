@@ -25,7 +25,6 @@ namespace Eplayers_AspNet_Luaninha.Controllers
         public IActionResult Cadastrar(IFormCollection formJogador)
         {
             Jogador novoJogador = new Jogador();
-            novoJogador.IdJogador = int.Parse(formJogador["idJogador"]);
             novoJogador.IdJogador = jogadorModel.idJogadores();
             novoJogador.Nome = formJogador["Nome"];
             novoJogador.Email = formJogador["Email"];
@@ -33,7 +32,7 @@ namespace Eplayers_AspNet_Luaninha.Controllers
 
             jogadorModel.Create(novoJogador);
             ViewBag.Jogadores = jogadorModel.ReadAll();
-            return LocalRedirect("~Jogador/Listar");
+            return LocalRedirect("~/Jogador/Listar");
         }
 
         [Route("{id}")]

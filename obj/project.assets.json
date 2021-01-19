@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\olive\\Desktop\\Eplayers_AspNet_Luaninha\\EPlayers_AspNet.csproj",
+      "projectUniqueName": "C:\\Users\\olive\\Desktop\\Eplayers_AspNet\\EPlayers_AspNet.csproj",
       "projectName": "EPlayers_AspNet",
-      "projectPath": "C:\\Users\\olive\\Desktop\\Eplayers_AspNet_Luaninha\\EPlayers_AspNet.csproj",
+      "projectPath": "C:\\Users\\olive\\Desktop\\Eplayers_AspNet\\EPlayers_AspNet.csproj",
       "packagesPath": "C:\\Users\\olive\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\olive\\Desktop\\Eplayers_AspNet_Luaninha\\obj\\",
+      "outputPath": "C:\\Users\\olive\\Desktop\\Eplayers_AspNet\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\olive\\AppData\\Roaming\\NuGet\\NuGet.Config"

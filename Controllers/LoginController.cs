@@ -24,21 +24,20 @@ namespace Eplayers_AspNet_Luaninha.Controllers
         [Route("Logar")]
         public IActionResult Logar(IFormCollection form )
         {
-            List<string> csv = jogadorModel.ReadAllLinesCSV("Database/Jogador.csv");
+           List<string> csv = jogadorModel.ReadAllLinesCSV("Database/Jogador.csv");
 
-            // Verificamos se as informações passadas existe na lista de string
+    // Verificamos se as informações passadas existe na lista de string
             var logado = 
             csv.Find(
                 x => 
-                x.Split(";")[2] == form["Email"] && 
-                x.Split(";")[3] == form["Senha"]
+                x.Split(";")[3] == form["Email"] && 
+                x.Split(";")[4] == form["Senha"]
             );
 
             // Redirecionamos o usuário logado caso encontrado
             if(logado != null)
             {
-                HttpContext.Session.SetString("_UserName", logado.Split(";")[1]);
-
+                HttpContext.Session.SetString("_UserName", logado.Split(";")[2]);
                 return LocalRedirect("~/");
             }
 
@@ -46,8 +45,8 @@ namespace Eplayers_AspNet_Luaninha.Controllers
             return LocalRedirect("~/Login");
         }
 
-        [Route("Logout")]
-        public IActionResult Logout()
+        [Route("Lougout")]
+        public IActionResult Sair()
         {
             HttpContext.Session.Remove("_UserName");
             return LocalRedirect("~/");
