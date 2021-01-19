@@ -1,4 +1,6 @@
-﻿@{
+﻿@using Eplayers_AspNet.Models
+@model Noticia
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -79,13 +81,16 @@
         <div class="container content">
             <section class="noticias">
                 <div class="card">
-                    <img src="Images/Teams/T1.jpeg" alt="Notícia sobra assunto 1">
+                     @foreach (Noticia noticia in ViewBag.Noticias)
+                     {
+            
+                    <img src="/img/Noticias/@noticia.Imagem" alt="Notícia sobra assunto @noticia.Titulo">
                     <div>
-                        <h4>Título da Noticia</h4>
-                        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos quibusdam quidem praesentium
-                            velit vel sapiente nemo obcaecati veritatis dolorum odio facere, quisquam mollitia quo eum.
-                            Aspernatur quam reiciendis ratione dolorem!</p>
+
+                    <h4 class="card-body">@noticia.Titulo</h4>
+                    <p>@noticia.Texto</p>
                     </div>
+                    }
                 </div>
 
 

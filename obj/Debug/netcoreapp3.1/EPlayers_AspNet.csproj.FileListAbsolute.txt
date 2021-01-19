@@ -112,3 +112,4 @@ C:\Users\olive\Desktop\Eplayers_AspNet_Luaninha\obj\Debug\netcoreapp3.1\EPlayers
 C:\Users\olive\Desktop\Eplayers_AspNet_Luaninha\obj\Debug\netcoreapp3.1\EPlayers_AspNet.csproj.CopyComplete
 C:\Users\olive\Desktop\Eplayers_AspNet_Luaninha\obj\Debug\netcoreapp3.1\Razor\Views\Login\Index.cshtml.g.cs
 C:\Users\olive\Desktop\Eplayers_AspNet\obj\Debug\netcoreapp3.1\Razor\Views\Login\Index.cshtml.g.cs
+C:\Users\olive\Desktop\Eplayers_AspNet\obj\Debug\netcoreapp3.1\Razor\Views\Noticia\Index.cshtml.g.cs

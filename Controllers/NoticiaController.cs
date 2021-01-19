@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Eplayers_AspNet.Controllers
 {
-    [Route("Equipe")]
+    [Route("Noticia")]
     public class NoticiaController : Controller
     {
 
