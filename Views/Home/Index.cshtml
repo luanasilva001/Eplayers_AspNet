@@ -8,8 +8,7 @@
  <div class="banner">
             <a asp-area= "Link para cadastro" asp-controller="Equipe" asp-action="Index" class="btn gradient">INSCREVA A SUA EQUIPE</a>
             <br>
-            <a asp-area="" asp-controller="Jogador" asp-action="Index" class="btn gradient" >JOGADOR</a>
-            <a asp-area="" asp-controller="Noticia" asp-action="Index" class="btn gradient" >Noticia</a>
+            <a asp-area="" asp-controller="Jogador" asp-action="Index" class="btn gradient" >CADASTRO DE JOGADOR</a>
 
         </div>
 
@@ -80,70 +79,20 @@
 
         <div class="container content">
             <section class="noticias">
-                <div class="card">
                      @foreach (Noticia noticia in ViewBag.Noticias)
                      {
-            
-                    <img src="/img/Noticias/@noticia.Imagem" alt="Notícia sobra assunto @noticia.Titulo">
-                    <div>
+                        <div class="card">
+                    
+                            <img src="/img/Noticias/@noticia.Imagem" alt="Notícia sobra assunto @noticia.Titulo">
+                            <div>
 
-                    <h4 class="card-body">@noticia.Titulo</h4>
-                    <p>@noticia.Texto</p>
-                    </div>
+                            <h4 class="card-body">@noticia.Titulo</h4>
+                            <p>@noticia.Texto</p>
+                            </div>
+                        </div>
                     }
-                </div>
-
-
-                <div class="card">
-                    <img src="Images/Teams/T2.jpg" alt="Notícia sobra assunto 1">
-                    <div>
-                        <h4>Título da Noticia</h4>
-                        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos quibusdam quidem praesentium
-                            velit vel sapiente nemo obcaecati veritatis dolorum odio facere, quisquam mollitia quo eum.
-                            Aspernatur quam reiciendis ratione dolorem!</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="Images/Teams/T3.jpeg" alt="Notícia sobra assunto 1">
-                    <div>
-                        <h4>Título da Noticia</h4>
-                        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos quibusdam quidem praesentium
-                            velit vel sapiente nemo obcaecati veritatis dolorum odio facere, quisquam mollitia quo eum.
-                            Aspernatur quam reiciendis ratione dolorem!</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="Images/Teams/T9.jpeg" alt="Notícia sobra assunto 1">
-                    <div>
-                        <h4>Título da Noticia</h4>
-                        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos quibusdam quidem praesentium
-                            velit vel sapiente nemo obcaecati veritatis dolorum odio facere, quisquam mollitia quo eum.
-                            Aspernatur quam reiciendis ratione dolorem!</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="Images/Teams/T5.jpeg" alt="Notícia sobra assunto 1">
-                    <div>
-                        <h4>Título da Noticia</h4>
-                        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos quibusdam quidem praesentium
-                            velit vel sapiente nemo obcaecati veritatis dolorum odio facere, quisquam mollitia quo eum.
-                            Aspernatur quam reiciendis ratione dolorem!</p>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <img src="Images/Teams/T7.jpeg" alt="Notícia sobra assunto 1">
-                    <div>
-                        <h4>Título da Noticia</h4>
-                        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos quibusdam quidem praesentium
-                            velit vel sapiente nemo obcaecati veritatis dolorum odio facere, quisquam mollitia quo eum.
-                            Aspernatur quam reiciendis ratione dolorem!</p>
-                    </div>
-                </div>
             </section>
+            
             <section class="recentes" id="resultados">
                 <h3>PARTIDAS RECENTES</h3>
 

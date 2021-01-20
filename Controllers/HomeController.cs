@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using EPlayers_AspNet.Models;
 using Microsoft.AspNetCore.Http;
+using Eplayers_AspNet.Models;
 
 namespace EPlayers_AspNet.Controllers
 {
@@ -21,6 +22,8 @@ namespace EPlayers_AspNet.Controllers
 
         public IActionResult Index()
         {
+            Noticia noticiaModel = new Noticia();
+            ViewBag.Noticias = noticiaModel.ReadAll();
             ViewBag.UserName = HttpContext.Session.GetString("_UserName"); 
             return View();
         }
